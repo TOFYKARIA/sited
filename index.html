@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воспроизведение с прожекторами</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .button {
+            background: linear-gradient(45deg, red, blue, green);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: rgbButton 5s infinite alternate;
+            margin-bottom: 20px;
+        }
+        #inputContainer {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        video, audio, img {
+            margin-top: 20px;
+            max-width: 90%;
+            max-height: 80vh;
+            border: 10px solid;
+            border-radius: 15px;
+            animation: rgbBorderAnimation 6s infinite linear;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+        }
+        #spotlightContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .spotlight {
+            width: 50px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            animation: rgbSpotlight 4s infinite alternate ease-in-out;
+        }
+        @keyframes rgbButton {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        @keyframes rgbBorderAnimation {
+            0% {
+                border-color: rgb(255, 0, 0);
+            }
+            25% {
+                border-color: rgb(0, 255, 0);
+            }
+            50% {
+                border-color: rgb(0, 0, 255);
+            }
+            75% {
+                border-color: rgb(255, 255, 0);
+            }
+            100% {
+                border-color: rgb(255, 0, 0);
+            }
+        }
+        @keyframes rgbSpotlight {
+            0% {
+                background: radial-gradient(circle, rgba(255,0,0,0.7) 0%, rgba(0,0,0,0) 70%);
+            }
+            33% {
+                background: radial-gradient(circle, rgba(0,255,0,0.7) 0%, rgba(0,0,0,0) 70%);
+            }
+            66% {
+                background: radial-gradient(circle, rgba(0,0,255,0.7) 0%, rgba(0,0,0,0) 70%);
+            }
+            100% {
+                background: radial-gradient(circle, rgba(255,0,0,0.7) 0%, rgba(0,0,0,0) 70%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="spotlightContainer">
+        <div class="spotlight"></div>
+        <div class="spotlight"></div>
+        <div class="spotlight"></div>
+    </div>
+    <button class="button" id="mainButton" onclick="showInput()">Вставь ссылку</button>
+    <div id="inputContainer">
+        <input type="text" id="mediaInput" placeholder="Вставьте прямую ссылку здесь...">
+        <button class="button" onclick="playMedia()">Воспроизвести</button>
+    </div>
+    <div id="mediaContainer"></div>
+
+    <script>
+        function showInput() {
+            document.getElementById('mainButton').style.display = 'none';
+            document.getElementById('inputContainer').style.display = 'flex';
+        }
+
+        function playMedia() {
+            const input = document.getElementById('mediaInput').value;
+            const mediaContainer = document.getElementById('mediaContainer');
+            const inputContainer = document.getElementById('inputContainer');
+
+            mediaContainer.innerHTML = ''; // Очистка предыдущего контента
+            inputContainer.style.display = 'none'; // Скрыть поле ввода и кнопку
+
+            if (input.endsWith('.mp4') || input.endsWith('.webm')) {
+                // Вставить видео
+                const video = document.createElement('video');
+                video.src = input;
+                video.controls = true;
+                video.autoplay = true;
+                mediaContainer.appendChild(video);
+            } else if (input.endsWith('.mp3') || input.endsWith('.ogg')) {
+                // Вставить аудио
+                const audio = document.createElement('audio');
+                audio.src = input;
+                audio.controls = true;
+                audio.autoplay = true;
+                mediaContainer.appendChild(audio);
+            } else if (input.endsWith('.gif')) {
+                // Вставить GIF
+                const img = document.createElement('img');
+                img.src = input;
+                mediaContainer.appendChild(img);
+            } else {
+                alert('Пожалуйста, вставьте прямую ссылку на видео (.mp4, .webm), музыку (.mp3, .ogg) или GIF.');
+                inputContainer.style.display = 'flex'; // Показать снова, если ошибка
+            }
+        }
+    </script>
+</body>
+</html>
