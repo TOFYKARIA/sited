@@ -48,9 +48,19 @@
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
-            color: #6A0DAD; /* Темно-фиолетовый цвет */
+            color: #6A0DAD; /* Начальный темно-фиолетовый цвет */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             margin: 0;
+            animation: colorChange 2s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #6A0DAD; /* Фиолетовый */
+            }
+            100% {
+                color: #FF007F; /* Розовый */
+            }
         }
 
         /* Таблица */
@@ -81,6 +91,26 @@
             width: 80%;
             height: 2px;
             background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+        }
+
+        /* Кнопка достижений */
+        .achievements-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #808080, #000);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.5s ease-in-out;
+            margin: 20px 0;
+        }
+
+        .achievements-button:hover {
+            background: linear-gradient(90deg, #000, #808080);
         }
 
         /* Достижения */
@@ -141,6 +171,9 @@
             <h1>UGCLAWS</h1>
         </header>
 
+        <!-- Кнопка достижений -->
+        <button class="achievements-button">Достижения (Скоро)</button>
+
         <!-- Таблица -->
         <table>
             <thead>
@@ -159,63 +192,63 @@
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❷" alt="Пример изображения">
+                        <img src="❷" alt="">
                         <span>❷</span>
                     </td>
                     <td contenteditable="true">test я сякой</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❸" alt="Пример изображения">
+                        <img src="❸" alt=".">
                         <span>❸</span>
                     </td>
                     <td contenteditable="true">test номер три</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❹" alt="Пример изображения">
+                        <img src="❹" alt=".">
                         <span>❹</span>
                     </td>
                     <td contenteditable="true">test номер четыре</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❺" alt="Пример изображения">
+                        <img src="❺" alt=".">
                         <span>❺</span>
                     </td>
                     <td contenteditable="true">test номер пять</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❻" alt="Пример изображения">
+                        <img src="❻" alt=".">
                         <span>❻</span>
                     </td>
                     <td contenteditable="true">test номер шесть</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❼" alt="Пример изображения">
+                        <img src="❼" alt=".">
                         <span>❼</span>
                     </td>
                     <td contenteditable="true">test номер семь</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❽" alt="Пример изображения">
+                        <img src="❽" alt=".">
                         <span>❽</span>
                     </td>
                     <td contenteditable="true">test номер восемь</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❾" alt="Пример изображения">
+                        <img src="❾" alt=".">
                         <span>❾</span>
                     </td>
                     <td contenteditable="true">test номер девять</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" class="image-cell">
-                        <img src="❶⓿" alt="Пример изображения">
+                        <img src="❶⓿" alt=".">
                         <span>❶⓿</span>
                     </td>
                     <td contenteditable="true">test номер десять</td>
