@@ -48,10 +48,10 @@
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
-            color: #6A0DAD; /* Начальный темно-фиолетовый цвет */
+            color: #6A0DAD; /* Темно-фиолетовый цвет */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             margin: 0;
-            animation: colorChange 2s infinite alternate;
+            animation: colorChange 3s infinite alternate;
         }
 
         @keyframes colorChange {
@@ -61,6 +61,26 @@
             100% {
                 color: #FF007F; /* Розовый */
             }
+        }
+
+        /* Кнопка достижений */
+        .achievements-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #808080, #000);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.5s ease-in-out;
+            margin: 20px 0;
+        }
+
+        .achievements-button:hover {
+            background: linear-gradient(90deg, #000, #808080);
         }
 
         /* Таблица */
@@ -93,26 +113,6 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
         }
 
-        /* Кнопка достижений */
-        .achievements-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, #808080, #000);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.5s ease-in-out;
-            margin: 20px 0;
-        }
-
-        .achievements-button:hover {
-            background: linear-gradient(90deg, #000, #808080);
-        }
-
         /* Достижения */
         .achievements {
             margin: 50px auto;
@@ -141,11 +141,10 @@
             margin-top: 10px;
         }
 
-        /* Стиль для цифры рядом с изображением */
+        /* Разделение цифры и изображения */
         .image-cell {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
         }
 
         .image-cell span {
@@ -184,71 +183,71 @@
             </thead>
             <tbody>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
+                    <td class="image-cell">
                         <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
                         <span>❶</span>
                     </td>
                     <td contenteditable="true">OTOSAKA || LEADER</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❷" alt="">
+                    <td class="image-cell">
+                        <img src="❷" alt="Пример изображения">
                         <span>❷</span>
                     </td>
                     <td contenteditable="true">test я сякой</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❸" alt=".">
+                    <td class="image-cell">
+                        <img src="❸" alt="Пример изображения">
                         <span>❸</span>
                     </td>
                     <td contenteditable="true">test номер три</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❹" alt=".">
+                    <td class="image-cell">
+                        <img src="❹" alt="Пример изображения">
                         <span>❹</span>
                     </td>
                     <td contenteditable="true">test номер четыре</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❺" alt=".">
+                    <td class="image-cell">
+                        <img src="❺" alt="Пример изображения">
                         <span>❺</span>
                     </td>
                     <td contenteditable="true">test номер пять</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❻" alt=".">
+                    <td class="image-cell">
+                        <img src="❻" alt="Пример изображения">
                         <span>❻</span>
                     </td>
                     <td contenteditable="true">test номер шесть</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❼" alt=".">
+                    <td class="image-cell">
+                        <img src="❼" alt="Пример изображения">
                         <span>❼</span>
                     </td>
                     <td contenteditable="true">test номер семь</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❽" alt=".">
+                    <td class="image-cell">
+                        <img src="❽" alt="Пример изображения">
                         <span>❽</span>
                     </td>
                     <td contenteditable="true">test номер восемь</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❾" alt=".">
+                    <td class="image-cell">
+                        <img src="❾" alt="Пример изображения">
                         <span>❾</span>
                     </td>
                     <td contenteditable="true">test номер девять</td>
                 </tr>
                 <tr>
-                    <td contenteditable="true" class="image-cell">
-                        <img src="❶⓿" alt=".">
+                    <td class="image-cell">
+                        <img src="❶⓿" alt="Пример изображения">
                         <span>❶⓿</span>
                     </td>
                     <td contenteditable="true">test номер десять</td>
