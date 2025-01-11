@@ -63,8 +63,8 @@
             }
         }
 
-        /* Кнопка достижений */
-        .achievements-button {
+        /* Кнопка достижений с плавным переходом цвета */
+        .achievements-link {
             display: inline-block;
             padding: 10px 20px;
             font-size: 24px;
@@ -77,9 +77,10 @@
             cursor: pointer;
             transition: background 0.5s ease-in-out;
             margin: 20px 0;
+            text-decoration: none; /* Убираем подчеркивание */
         }
 
-        .achievements-button:hover {
+        .achievements-link:hover {
             background: linear-gradient(90deg, #000, #808080);
         }
 
@@ -171,7 +172,7 @@
         </header>
 
         <!-- Кнопка достижений -->
-        <button class="achievements-button">Достижения (Скоро)</button>
+        <a href="#" class="achievements-link">Достижения (Скоро)</a>
 
         <!-- Таблица -->
         <table>
@@ -187,70 +188,70 @@
                         <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
                         <span>❶</span>
                     </td>
-                    <td contenteditable="true">OTOSAKA || LEADER</td>
+                    <td>OTOSAKA || LEADER</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❷" alt="Пример изображения">
                         <span>❷</span>
                     </td>
-                    <td contenteditable="true">test я сякой</td>
+                    <td>test я сякой</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❸" alt="Пример изображения">
                         <span>❸</span>
                     </td>
-                    <td contenteditable="true">test номер три</td>
+                    <td>test номер три</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❹" alt="Пример изображения">
                         <span>❹</span>
                     </td>
-                    <td contenteditable="true">test номер четыре</td>
+                    <td>test номер четыре</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❺" alt="Пример изображения">
                         <span>❺</span>
                     </td>
-                    <td contenteditable="true">test номер пять</td>
+                    <td>test номер пять</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❻" alt="Пример изображения">
                         <span>❻</span>
                     </td>
-                    <td contenteditable="true">test номер шесть</td>
+                    <td>test номер шесть</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❼" alt="Пример изображения">
                         <span>❼</span>
                     </td>
-                    <td contenteditable="true">test номер семь</td>
+                    <td>test номер семь</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❽" alt="Пример изображения">
                         <span>❽</span>
                     </td>
-                    <td contenteditable="true">test номер восемь</td>
+                    <td>test номер восемь</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❾" alt="Пример изображения">
                         <span>❾</span>
                     </td>
-                    <td contenteditable="true">test номер девять</td>
+                    <td>test номер девять</td>
                 </tr>
                 <tr>
                     <td class="image-cell">
                         <img src="❶⓿" alt="Пример изображения">
                         <span>❶⓿</span>
                     </td>
-                    <td contenteditable="true">test номер десять</td>
+                    <td>test номер десять</td>
                 </tr>
             </tbody>
         </table>
