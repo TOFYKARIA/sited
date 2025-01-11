@@ -65,22 +65,22 @@
             animation: colorChangeUGCLAWS 3s infinite alternate; /* Переливание цвета */
         }
 
-        /* Анимация текста "PhotoGallery" (переливание серый -> белый) */
-        @keyframes grayWhiteTransition {
+        /* Анимация текста "PhotoGallery" (серо-белый -> темно-серый) */
+        @keyframes colorChangePhotoGallery {
             0% {
-                color: rgb(169, 169, 169); /* Серый */
+                color: rgb(211, 211, 211); /* Светло-серый */
             }
             100% {
-                color: rgb(255, 255, 255); /* Белый */
+                color: rgb(169, 169, 169); /* Темно-серый */
             }
         }
 
-        .photo-gallery h2 {
+        .achievements h2 {
             font-family: 'Roboto', sans-serif;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 30px;
-            animation: grayWhiteTransition 3s infinite alternate; /* Переливание серого в белый */
+            animation: colorChangePhotoGallery 5s infinite alternate; /* Переливание цвета */
         }
 
         /* Таблица */
@@ -154,12 +154,6 @@
             <h1>UGCLAWS</h1>
         </header>
 
-        <!-- PhotoGallery -->
-        <div class="photo-gallery">
-            <h2>PhotoGallery</h2>
-            <!-- Ваши фотографии и галерея могут быть добавлены сюда -->
-        </div>
-
         <!-- Таблица -->
         <table>
             <thead>
@@ -215,8 +209,9 @@
         <!-- Разделитель -->
         <div class="divider"></div>
 
-        <!-- Достижения -->
+        <!-- ФотоГалерея -->
         <section class="achievements">
+            <h2>PhotoGallery</h2>
             <div class="achievement">
                 <img src="https://envs.sh/96X.jpg" alt="">
                 <p>Достижение 1</p>
