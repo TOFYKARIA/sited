@@ -44,34 +44,46 @@
             width: 100px;
             height: auto;
         }
+
+        /* Анимация текста "UGCLAWS" (светлофиолетовый -> темнофиолетовый) */
+        @keyframes colorChangeUGCLAWS {
+            0% {
+                color: rgb(147, 112, 219); /* Светлофиолетовый */
+            }
+            100% {
+                color: rgb(75, 0, 130); /* Темнофиолетовый */
+            }
+        }
+
         header h1 {
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
-            color: #6A0DAD; /* Темно-фиолетовый цвет */
+            color: rgb(147, 112, 219); /* Начальный цвет */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             margin: 0;
-            animation: colorChange 3s infinite alternate;
+            animation: colorChangeUGCLAWS 3s infinite alternate; /* Переливание цвета */
         }
 
-        /* Анимация текста */
-        @keyframes colorChange {
+        /* Анимация текста "Достижения" (переливающийся RGB) */
+        @keyframes colorChangeAchievements {
             0% {
-                color: #6A0DAD; /* Темно-фиолетовый */
+                color: rgb(255, 105, 180); /* Светло-розовый */
+            }
+            50% {
+                color: rgb(75, 0, 130); /* Темнофиолетовый */
             }
             100% {
-                color: #FF007F; /* Розовый */
+                color: rgb(0, 255, 255); /* Бирюзовый */
             }
         }
 
-        /* Анимация текста "Достижения (Скоро)" */
-        @keyframes grayToBlack {
-            0% {
-                color: #808080; /* Серый */
-            }
-            100% {
-                color: #000000; /* Черный */
-            }
+        .achievements h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: colorChangeAchievements 5s infinite alternate; /* Переливание цвета */
         }
 
         /* Таблица */
@@ -109,18 +121,12 @@
             margin: 50px auto;
             text-align: center;
         }
-        .achievements h2 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 36px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 30px;
-            animation: grayToBlack 3s infinite alternate;
-        }
+
         .achievement {
             margin: 20px auto;
             text-align: center;
         }
+
         .achievement img {
             width: 300px;
             height: auto;
