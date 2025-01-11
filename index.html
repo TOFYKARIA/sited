@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таблица с изображениями и цифрами</title>
+    <title>UGCLAWS CLAN</title>
     <style>
         /* Общие стили */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -13,6 +14,22 @@
             color: white;
             overflow-x: hidden;
             overflow-y: auto;
+        }
+
+        /* Фон */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Заголовок */
@@ -31,7 +48,7 @@
             font-family: 'Roboto', sans-serif;
             font-size: 48px;
             font-weight: bold;
-            color: white;
+            color: #6A0DAD; /* Темно-фиолетовый цвет */
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             margin: 0;
         }
@@ -41,22 +58,57 @@
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.8);
+            background: #808080; /* Серый фон */
             color: black;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #ccc; /* Светло-серая граница */
             text-align: left;
             padding: 8px;
         }
         th {
-            background-color: rgba(242, 242, 242, 0.9);
+            background-color: #B0B0B0; /* Серый фон для заголовков */
         }
         img {
             width: 50px;
             height: 50px;
-            display: inline-block;
-            vertical-align: middle;
+            display: block;
+        }
+
+        /* Разделитель */
+        .divider {
+            margin: 50px auto;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+        }
+
+        /* Достижения */
+        .achievements {
+            margin: 50px auto;
+            text-align: center;
+        }
+        .achievements h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .achievement {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .achievement img {
+            width: 300px;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .achievement p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         /* Стиль для цифры рядом с изображением */
@@ -70,120 +122,154 @@
             font-size: 24px; /* Размер цифры */
             margin-left: 10px; /* Отступ между изображением и цифрой */
         }
-
-        /* Редактируемые ячейки */
-        td[contenteditable="true"] {
-            min-height: 60px;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://envs.sh/9Vw.png" alt="Логотип">
-        <h1>UGCLAWS</h1>
-    </header>
+    <!-- Фон -->
+    <div class="background">
+        <video autoplay muted loop>
+            <source src="https://envs.sh/oyP.mp4" type="video/mp4">
+            <img src="https://envs.sh/oyP.mp4" alt="Фон">
+        </video>
+    </div>
 
-    <!-- Таблица -->
-    <table>
-        <thead>
-            <tr>
-                <th>Изображение</th>
-                <th>Текст</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❶</span>
-                </td>
-                <td contenteditable="true">
-                    <span>OTOSAKA || LEADER</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❷</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test я сякой</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❸</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер три</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❹</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер четыре</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❺</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер пять</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❻</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер шесть</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❼</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер семь</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❽</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер восемь</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❾</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер девять</span>
-                </td>
-            </tr>
-            <tr>
-                <td contenteditable="true" class="image-cell">
-                    <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
-                    <span>❶⓿</span>
-                </td>
-                <td contenteditable="true">
-                    <span>test номер десять</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Содержимое -->
+    <div class="content">
+        <!-- Заголовок -->
+        <header>
+            <img src="https://envs.sh/9Vw.png" alt="Логотип">
+            <h1>UGCLAWS</h1>
+        </header>
 
+        <!-- Таблица -->
+        <table>
+            <thead>
+                <tr>
+                    <th>---</th>
+                    <th>PLAYERS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="https://envs.sh/9Vw.png" alt="Пример изображения">
+                        <span>❶</span>
+                    </td>
+                    <td contenteditable="true">OTOSAKA || LEADER</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❷" alt="Пример изображения">
+                        <span>❷</span>
+                    </td>
+                    <td contenteditable="true">test я сякой</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❸" alt="Пример изображения">
+                        <span>❸</span>
+                    </td>
+                    <td contenteditable="true">test номер три</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❹" alt="Пример изображения">
+                        <span>❹</span>
+                    </td>
+                    <td contenteditable="true">test номер четыре</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❺" alt="Пример изображения">
+                        <span>❺</span>
+                    </td>
+                    <td contenteditable="true">test номер пять</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❻" alt="Пример изображения">
+                        <span>❻</span>
+                    </td>
+                    <td contenteditable="true">test номер шесть</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❼" alt="Пример изображения">
+                        <span>❼</span>
+                    </td>
+                    <td contenteditable="true">test номер семь</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❽" alt="Пример изображения">
+                        <span>❽</span>
+                    </td>
+                    <td contenteditable="true">test номер восемь</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❾" alt="Пример изображения">
+                        <span>❾</span>
+                    </td>
+                    <td contenteditable="true">test номер девять</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" class="image-cell">
+                        <img src="❶⓿" alt="Пример изображения">
+                        <span>❶⓿</span>
+                    </td>
+                    <td contenteditable="true">test номер десять</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Разделитель -->
+        <div class="divider"></div>
+
+        <!-- Достижения -->
+        <section class="achievements">
+            <h2>Достижения (Скоро)</h2>
+            <div class="achievement">
+                <img src="achievement1.png" alt="Достижение 1">
+                <p>Достижение 1</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement2.png" alt="Достижение 2">
+                <p>Достижение 2</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement3.png" alt="Достижение 3">
+                <p>Достижение 3</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement4.png" alt="Достижение 4">
+                <p>Достижение 4</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement5.png" alt="Достижение 5">
+                <p>Достижение 5</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement6.png" alt="Достижение 6">
+                <p>Достижение 6</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement7.png" alt="Достижение 7">
+                <p>Достижение 7</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement8.png" alt="Достижение 8">
+                <p>Достижение 8</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement9.png" alt="Достижение 9">
+                <p>Достижение 9</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement10.png" alt="Достижение 10">
+                <p>Достижение 10</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
